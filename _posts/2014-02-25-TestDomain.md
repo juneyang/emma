@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: artical
 title: 我爱杨小跳
 ---
 ## {{ page.title }}
