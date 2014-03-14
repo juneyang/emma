@@ -51,12 +51,14 @@ window.onload = function(){
                 var timer = parseInt( Math.random()*500 + Math.random()*1000 );
                 setTimeout(  function(){
                     var newIframe = document.createElement( 'iframe' );
-                    newIframe['src'] =  itemList[ parseInt( Math.random() * itemList.length )];
+                    var randomIndex = parseInt( Math.random() * itemList.length );
+                    newIframe['src'] =  itemList[ randomIndex ];
                     newIframe.width = 120;
                     newIframe.height = 120;
                     newIframe.frameBorder = 0;
                     newIframe.scrolling = "no";
                     document.getElementById('backYard').appendChild( newIframe );
+                    itemList.remove( randomIndex );
                     addAll();
                 }, timer )
             }
