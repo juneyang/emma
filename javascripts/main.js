@@ -19,7 +19,7 @@ var itemList = [
 try {
     var i = 0;
 
-    function addAll() {
+    function addFrame() {
         if (i < 6) {
             var timer = parseInt(Math.random() * 500 + Math.random() * 1000);
             setTimeout(function() {
@@ -37,7 +37,7 @@ try {
         }
         i++;
     }
-    addAll()
+    addFrame()
 } catch (ex) {
     console.log(ex)
 }

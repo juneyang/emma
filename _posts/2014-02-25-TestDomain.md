@@ -1,6 +1,6 @@
 ---
 layout: artical
-title: 我爱杨小跳
+title: testDomain
 ---
 ## {{ page.title }}
 测试域名，泰斯特  
