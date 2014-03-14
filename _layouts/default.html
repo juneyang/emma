@@ -22,5 +22,42 @@
   </div>
 </header>
 {{ content }}
+
+<script type="text/javascript">
+
+window.onload = function(){
+    var itemList = [
+            'http://item.taobao.com/item.htm?spm=a230r.1.14.1.gY06gc&id=37426777334',
+            'http://item.taobao.com/item.htm?spm=a230r.1.14.1.sbpy5z&id=37303359972',
+            'http://item.taobao.com/item.htm?spm=a230r.1.14.1.4B4mpj&id=37470266944',
+            'http://item.taobao.com/item.htm?spm=a230r.1.14.1.wFVx4L&id=37491168447',
+            'http://item.taobao.com/item.htm?spm=a230r.1.14.1.5OxFBc&id=37439252185',
+            'http://item.taobao.com/item.htm?spm=a230r.1.14.1.kphUGz&id=37439148275'
+        ];
+    try{
+        var i = 0;
+        function addAll(){
+            if( i < itemList.length ){
+                var timer = parseInt( Math.random()*500 + Math.random()*1000 );
+                setTimeout(  function(){
+                    var newIframe = document.createElement( 'iframe' );
+                    newIframe['src'] =  itemList[i - 1];
+                    newIframe.width = 120;
+                    newIframe.height = 120;
+                    newIframe.frameBorder = 0;
+                    newIframe.scrolling = "no";
+                    document.getElementById('backYard').appendChild( newIframe );
+                    addAll();
+                }, timer )
+                console.log( timer )
+            }
+            i++;
+        }
+        addAll()
+    } catch ( ex ){
+        console.log( ex )
+    }
+}
+</script>
 </body>
 </html>
