@@ -32,7 +32,7 @@ try {
                 newIframe.scrolling = "no";
                 document.getElementById('backYard').appendChild(newIframe);
                 itemList.splice(randomIndex, 1);
-                addAll();
+                addFrame();
             }, timer)
         }
         i++;
