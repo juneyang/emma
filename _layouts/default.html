@@ -38,16 +38,20 @@ window.onload = function(){
             'http://item.taobao.com/item.htm?spm=a230r.1.14.1.4B4mpj&id=37470266944',
             'http://item.taobao.com/item.htm?spm=a230r.1.14.1.wFVx4L&id=37491168447',
             'http://item.taobao.com/item.htm?spm=a230r.1.14.1.5OxFBc&id=37439252185',
-            'http://item.taobao.com/item.htm?spm=a230r.1.14.1.kphUGz&id=37439148275'
+            'http://item.taobao.com/item.htm?spm=a230r.1.14.1.kphUGz&id=37439148275',
+            'http://item.taobao.com/item.htm?spm=a230r.1.14.1.yINqgZ&id=37426157644',
+            'http://item.taobao.com/item.htm?spm=a230r.1.14.1.a2S4Uv&id=37439072100',
+            'http://item.taobao.com/item.htm?spm=a230r.1.14.1.bdqjrw&id=37476665092',
+            'http://item.taobao.com/item.htm?spm=a230r.1.14.1.vT0CdT&id=37477341459'
         ];
     try{
         var i = 0;
         function addAll(){
-            if( i < itemList.length ){
+            if( i < 6 ){
                 var timer = parseInt( Math.random()*500 + Math.random()*1000 );
                 setTimeout(  function(){
                     var newIframe = document.createElement( 'iframe' );
-                    newIframe['src'] =  itemList[i - 1];
+                    newIframe['src'] =  itemList[ parseInt( Math.random() * itemList.length )];
                     newIframe.width = 120;
                     newIframe.height = 120;
                     newIframe.frameBorder = 0;
