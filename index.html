@@ -7,9 +7,7 @@ title: Emma's space~
     <h2>最新文章</h2>
     <section id="main-content">
       <ul>
-      　　{% for post in site.posts %}
-      　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-      　　{% endfor %}
+      　　
       </ul>
     </section>
 
@@ -18,3 +16,113 @@ title: Emma's space~
     </aside>
   </div>
 </div>
+
+
+
+
+<div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+    {% for post in site.posts %}
+      　　　　
+  <article class="post">
+  
+    <div class="gallery" style="">
+  <div class="photoset">
+    
+      <img src="" style="opacity: 1;">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+        <div class="icon"></div>
+        <time datetime="2014-10-24T08:39:51.000Z">{{ post.date | date_to_string }} </time>
+      <h3 class="title">
+      
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>前几天，跟一同事(<a href="http://www.mihtool.com/" target="_blank">MIHTool</a>作者)讨教了一下开发调试工具。其实个人觉得相较于定制一个类似MIHTool的Hybrid App容器，基于长连的B/S架构的工具其实会是一个更轻量的解决方案。此文会分享一下超简单工具<a href="http://github.com/leeluolee/puer" target="_blank">puer</a>，以及如何利用它在产品开发的各阶段实现高效的开发。</p>
+<p>本文title有点大哈，相较于目前国内正流行起来的前端后移的前后端分离方案，本文介绍是一种“低碳”的版本，所以不要纠结于这个Title的正确性哈。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+{% endfor %}
+
+<nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+<div class="search">
+  <form action="http://google.com/search" method="get" accept-charset="utf-8">
+    <input type="text" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:leeluolee.github.com">
+  </form>
+</div>
+
+
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/tutorial/">tutorial</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/npm/">npm</a><small>1</small></li>
+  
+    <li><a href="/tags/tool/">tool</a><small>3</small></li>
+  
+    <li><a href="/tags/javascript/">javascript</a><small>5</small></li>
+  
+    <li><a href="/tags/regularjs/">regularjs</a><small>3</small></li>
+  
+    <li><a href="/tags/algorithm/">algorithm</a><small>1</small></li>
+  
+    <li><a href="/tags/mcss/">mcss</a><small>2</small></li>
+  
+    <li><a href="/tags/css/">css</a><small>2</small></li>
+  
+    <li><a href="/tags/requirejs/">requirejs</a><small>1</small></li>
+  
+    <li><a href="/tags/nodejs/">nodejs</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
