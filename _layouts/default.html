@@ -14,12 +14,21 @@
     <![endif]-->
 </head>
 <body>
-<header>
-  <div class="inner">
-    <h1>{{ page.title }}</h1>
-    <h2>emma</h2>
-    <a href="https://github.com/juneyang/emma" class="button"><small>View project on</small>GitHub</a>
-  </div>
+<header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">{{ page.title }}</a></h1>
+  <h2><a href="/">emma</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/archives">归档</a></li>
+      <li><a href="/atom.xml">订阅</a></li>
+      <li><a href="https://github.com/juneyang">Github</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
 </header>
 {{ content }}
 <script type="text/javascript" src="javascripts/main.js"></script>
