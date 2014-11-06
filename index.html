@@ -85,16 +85,14 @@ title: Emma's space~
 
         <div class="widget tag">
             <h3 class="title">标签</h3>
+            <div class="showTags">
+              <code>
+                {{ site.tags }}
+              </code>
+            </div>
             <ul class="entry">
-                <div class="showTags">
-                  <code>
-                    {{ page.tags }}
-                  </code>
-                </div>
                 {% for tag in site.tags %}
-                    <li><a href="#">{{ tag.post }}</a>
-                      <small>{{ tag }}</small>
-                  </li>
+                    <li><a href="/tags.html?tag={{ tag[0] }}"> {{ tag[0] }}</a></li>
                 {% endfor %}
             </ul>
         </div>
