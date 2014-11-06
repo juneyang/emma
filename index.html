@@ -84,8 +84,8 @@ title: Emma's space~
                   {{ site.tags }}
                 </div>
                 {% for tag in site.tags %}
-                    <li><a href="#">{{ tag }}</a>
-                      <small>1</small>
+                    <li><a href="#">{{ tag.TAG }}</a>
+                      <small>{{ tag.length }}</small>
                   </li>
                 {% endfor %}
             </ul>
