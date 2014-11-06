@@ -7,16 +7,7 @@ title: Emma's space~
     <div id="main-col" class="alignleft">
         <div id="wrapper">
         {% for tag in site.tags %}
-
-
-          <script>
-              var tagname = window.location.search.replace( '?tag=', '' );
-              var tag0 = "{{ tag[0] }}";
-              if( tag0 == tagname ){
-                document.write( '{% if tag[0] == "' );
-                document.write( tagname + '" \%\}' )
-              }
-          </script>
+          {% if tag[0] == "test" %}
           <h2 class="archive-title tag">{{ tag | first }}</h2>
           {% for post in tag.last %}
           <article class="post">
