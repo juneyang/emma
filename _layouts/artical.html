@@ -74,7 +74,9 @@
                             <div class="categories">
                             </div>
                             <div class="tags">
-                                {{ page.tags }}
+                                {% for tag in page.tags %}
+                                <a href="/tags.html?tag={{ tag[0] }}"> {{ tag[0] }}</a>
+                                {% endfor %}
                             </div>
                             <div class="clearfix"></div>
                         </footer>
@@ -97,14 +99,16 @@
                     </li>
                 </ul>
             </div>
+
             <div class="widget tag">
                 <h3 class="title">标签</h3>
                 <ul class="entry">
-                    <li><a href="/tags/npm/">npm</a>
-                        <small>1</small>
-                    </li>
+                    {% for tag in site.tags %}
+                        <li><a href="/tags.html?tag={{ tag[0] }}"> {{ tag[0] }}</a><small>{{ tag | last | size }}</small></li>
+                    {% endfor %}
                 </ul>
             </div>
+
         </aside>
         <div class="clearfix"></div>
     </div>
