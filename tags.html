@@ -7,7 +7,7 @@ title: Emma's space~
     <div id="main-col" class="alignleft">
         <div id="wrapper">
         {% for tag in site.tags %}
-        <div>{{ tag[0] }}</div>
+          {% if tag[0] == "test" %}
           <h2 class="archive-title tag">{{ tag | first }}</h2>
           {% for post in tag.last %}
           <article class="post">
@@ -46,7 +46,7 @@ title: Emma's space~
                 </div>
             </article>
             {% endfor %}
-            
+            {% endif %}
             {% endfor %}
             <nav id="pagination">
 
