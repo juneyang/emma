@@ -13,7 +13,7 @@ title: Emma's space~
               var tagname = window.location.search.replace( '?tag=', '' );
               var tag0 = "{{ tag[0] }}";
               if( tag0 == tagname ){
-                document.write( '<\/script>{% if tag[0] == "' + tagname + '" %}' )
+                document.write( '\{\% if tag[0] == "' + tagname + '" \%\}' )
               }
           </script>
           <h2 class="archive-title tag">{{ tag | first }}</h2>
