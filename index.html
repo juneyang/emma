@@ -6,7 +6,13 @@ title: Emma's space~
 <div id="content" class="inner">
     <div id="main-col" class="alignleft">
         <div id="wrapper">
+        <pre>
+          <code>
+            {{ site.posts }}
+          </code>
+        </pre>
         {% for post in site.posts %}
+
           <article class="post">
 
                 <div class="gallery" style="">
@@ -86,8 +92,8 @@ title: Emma's space~
                   </code>
                 </div>
                 {% for tag in site.tags %}
-                    <li><a href="#">{{ tag.name }}</a>
-                      <small>{{ tag.post.length }}</small>
+                    <li><a href="#">{{ tag.post }}</a>
+                      <small>{{ tag }}</small>
                   </li>
                 {% endfor %}
             </ul>
