@@ -1,88 +1,89 @@
----
-layout: default
-title: Emma's space~
----
+--- layout: default title: Emma's space~ ---
 
 <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-    {% for post in site.posts %}
-      　　　　
-  <article class="post">
-  
-    <div class="gallery" style="">
-  <div class="photoset">
-    
-      <img src="" style="opacity: 1;">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-        <div class="icon"></div>
-        <time datetime="2014-10-24T08:39:51.000Z">{{ post.date | date_to_string }} </time>
-      <h3 class="title">
-      
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-      
+    <div id="main-col" class="alignleft">
+        <div id="wrapper">
+            {% for post in site.posts %} 　　　　
+            <article class="post">
 
-    </header>
-    <div class="entry">
-      <p>{{ post.desp }}</p>
+                <div class="gallery" style="">
+                    <div class="photoset">
+
+                        <img src="" style="opacity: 1;">
+
+                    </div>
+                    <div class="control">
+                        <div class="prev"></div>
+                        <div class="next"></div>
+                    </div>
+                </div>
+
+                <div class="post-content">
+                    <header>
+                        <div class="icon"></div>
+                        <time datetime="2014-10-24T08:39:51.000Z">{{ post.date | date_to_string }}</time>
+                        <h3 class="title">
+
+                            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                        </h3>
+
+
+                    </header>
+                    <div class="entry">
+                        <p>{{ post.desp }}</p>
+                    </div>
+                    <footer>
+                        <div class="alignleft">
+                            <a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Read More</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </footer>
+                </div>
+            </article>
+            {% endfor %}
+
+            <nav id="pagination">
+
+
+                <div class="clearfix"></div>
+            </nav>
+        </div>
     </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-{% endfor %}
-
-<nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav></div></div>
     <aside id="sidebar" class="alignright">
-<div class="search">
-  <form action="http://google.com/search" method="get" accept-charset="utf-8">
-    <input type="text" name="q" results="0" placeholder="搜索">
-    <input type="hidden" name="q" value="site:leeluolee.github.com">
-  </form>
-</div>
+        <div class="search">
+            <form action="http://google.com/search" method="get" accept-charset="utf-8">
+                <input type="text" name="q" results="0" placeholder="搜索">
+                <input type="hidden" name="q" value="site:leeluolee.github.com">
+            </form>
+        </div>
 
 
-<div class="widget tag">
-  <h3 class="title">分类</h3>
-  <ul class="entry">
-    <li><a href="/categories/tutorial/">tutorial</a><small>1</small></li>
-  </ul>
-</div>
-
-
-
-<div class="widget tag">
-  <h3 class="title">标签</h3>
-  <ul class="entry">
-    <li><a href="/tags/npm/">npm</a><small>1</small></li>
-    <li><a href="/tags/tool/">tool</a><small>3</small></li>
-  </ul>
-</div>
+        <div class="widget tag">
+            <h3 class="title">分类</h3>
+            <ul class="entry">
+                <li><a href="/categories/tutorial/">tutorial</a>
+                    <small>1</small>
+                </li>
+            </ul>
+        </div>
 
 
 
+        <div class="widget tag">
+            <h3 class="title">标签</h3>
+            <ul class="entry">
+                <li><a href="/tags/npm/">npm</a>
+                    <small>1</small>
+                </li>
+                <li><a href="/tags/tool/">tool</a>
+                    <small>3</small>
+                </li>
+            </ul>
+        </div>
 
-</aside>
+
+
+
+    </aside>
     <div class="clearfix"></div>
-  </div>
+</div>
