@@ -7,15 +7,12 @@ title: Emma's space~
     <div id="main-col" class="alignleft">
         <div id="wrapper">
         {% for tag in site.tags %}
-          <h2 class="tag">{{ tag | first }}</h2>
+          <h2 class="archive-title tag">{{ tag | first }}</h2>
           {% for post in tag.last %}
           <article class="post">
-
                 <div class="gallery" style="">
                     <div class="photoset">
-
                         <img src="" style="opacity: 1;">
-
                     </div>
                     <div class="control">
                         <div class="prev"></div>
@@ -28,11 +25,8 @@ title: Emma's space~
                         <div class="icon"></div>
                         <time datetime="2014-10-24T08:39:51.000Z">{{ post.date | date_to_string }}</time>
                         <h3 class="title">
-
                             <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                         </h3>
-
-
                     </header>
                     <div class="entry">
                         {{ post.excerpt }}
