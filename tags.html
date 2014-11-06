@@ -6,11 +6,11 @@ title: Emma's space~
 <div id="content" class="inner">
     <div id="main-col" class="alignleft">
         <div id="wrapper">
-        <span>{{ tag | last | size }}</span>
         {% for tag in site.tags %}
-          
           <h2>{{ tag | first }}</h2>
-            {% for post in tag.last %}
+          <span>{{ tag | last | size }}</span>
+
+          {% for post in tag.last %}
           <article class="post">
 
                 <div class="gallery" style="">
