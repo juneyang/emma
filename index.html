@@ -35,6 +35,11 @@ title: Emma's space~
                     <div class="entry">
                         <p>{{ post.desp }}</p>
                     </div>
+                    <div class="tags">
+                        {% for tags in post %}
+                          <a href="#">tags</a>
+                        {% endfor %}
+                    </div>
                     <footer>
                         <div class="alignleft">
                             <a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Read More</a>
