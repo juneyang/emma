@@ -7,9 +7,7 @@ title: Emma's space~
     <div id="main-col" class="alignleft">
         <div id="wrapper">
         {% for tag in site.tags %}
-          <h2>{{ tag | first }}</h2>
-          <span>{{ tag | last | size }}</span>
-
+          <h2 class="tag">{{ tag | first }}</h2>
           {% for post in tag.last %}
           <article class="post">
 
@@ -86,7 +84,7 @@ title: Emma's space~
             <h3 class="title">标签</h3>
             <ul class="entry">
                 {% for tag in site.tags %}
-                    <li><a href="/tags.html?tag={{ tag[0] }}"> {{ tag[0] }}</a><small>({{ tag | last | size }})</small></li>
+                    <li><a href="/tags.html?tag={{ tag[0] }}"> {{ tag[0] }}</a><small>{{ tag | last | size }}</small></li>
                 {% endfor %}
             </ul>
         </div>
